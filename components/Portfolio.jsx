@@ -28,7 +28,8 @@ const projects = [
 const skills = [
   "JavaScript", "TypeScript", "React", "Next.js", 
   "Three.js", "WebGL", "TailwindCSS", "Node.js",
-  "3D Modeling", "Animation", "UI/UX Design"
+  "Python", "SQL", "NoSQL", "Git", "MongoDB","PostgreSQL",
+  "Express", "R", "C", "HTML", "CSS"
 ];
 
 export default function Portfolio() {
@@ -123,10 +124,10 @@ export default function Portfolio() {
                     I'm Lawrence Velilla and I am a fullstack developer. 
                   </p>
                   <p className="about-paragraph">
-                    My journey into web development began [your story]. Now, I focus on creating performant, accessible, and visually striking applications using modern web technologies.
+                    {/* ADD ABOUT ME TEXT HERE */}
                   </p>
                   <p className="about-paragraph">
-                    When I'm not coding, you can find me [your interests/hobbies].
+                    {/* ADD MORE ABOUT ME TEXT HERE */}
                   </p>
                 </div>
               </div>
@@ -195,17 +196,17 @@ export default function Portfolio() {
                   or just want to say hi, feel free to reach out!
                 </p>
                 <div className="social-links">
-                  <a href="https://github.com/yourusername" className="social-icon">
+                  <a href="https://github.com/LawrenceVelilla" className="social-icon">
                     <FaGithub />
                   </a>
-                  <a href="https://linkedin.com/in/yourusername" className="social-icon">
+                  <a href="https://www.linkedin.com/in/lawrence-velilla-609646221/" className="social-icon">
                     <FaLinkedin />
                   </a>
                   <a href="mailto:your.email@example.com" className="social-icon">
                     <FaEnvelope />
                   </a>
                 </div>
-                <a href="mailto:your.email@example.com" className="primary-button">
+                <a href="vel.lawrence04@gmail.com" className="primary-button">
                   Say Hello
                 </a>
               </div>
@@ -216,7 +217,7 @@ export default function Portfolio() {
         {/* Footer */}
         <footer className="footer">
           <div className="footer-container">
-            <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p>© {new Date().getFullYear()}</p>
             <p className="footer-text">Built with Next.js, Three.js and TailwindCSS</p>
           </div>
         </footer>

@@ -5,53 +5,22 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1; /* Raise this above 0 but below content-overlay */
+  z-index: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.scene-background.visible {
+  opacity: 1;
+}
+
+.scene-background.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Make canvas take full size */
 .scene-background canvas {
   width: 100%;
   height: 100%;
-  pointer-events: auto !important; /* Ensure this receives pointer events */
-}
-
-/* Add some styles for the content that will overlay the 3D scene */
-.content-overlay {
-  position: relative;
-  z-index: 2;
-  pointer-events: none; /* Make the overall container pass through events */
-}
-
-/* Make all clickable elements within the overlay receive events */
-.content-overlay a,
-.content-overlay button,
-.content-overlay input,
-.content-overlay select,
-.content-overlay textarea,
-.content-overlay .clickable {
-  pointer-events: auto;
-}
-
-/* Add a slight background to content sections for better readability */
-.content-section {
-  background-color: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(8px);
-  border-radius: 8px;
-  margin: 20px 0;
-  padding: 40px 20px;
-  pointer-events: auto; /* Make content sections receive events */
-}
-
-/* Hero section should pass through events to allow 3D interaction */
-.hero-section {
-  pointer-events: none;
-}
-
-.hero-section .hero-content {
-  pointer-events: auto;
-}
-
-/* Navigation should receive events */
-header {
-  pointer-events: auto;
+  pointer-events: auto !important;
 }

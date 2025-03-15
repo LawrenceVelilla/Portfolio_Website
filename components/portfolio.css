@@ -31,14 +31,10 @@ body {
   }
   
   /* Navigation */
-  .nav-header {
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    background-color: rgba(17, 24, 39, 0.8);
-    backdrop-filter: blur(8px);
-    pointer-events: auto;
-  }
+ .nav-header {
+  background-color: transparent; /* Fully transparent */
+  backdrop-filter: none; /* No blur */
+}
   
   .nav-container {
     max-width: 1200px;
@@ -68,7 +64,7 @@ body {
   }
   
   .nav-links a:hover {
-    color: #283618;
+    color: #dda15e;
   }
   
   .nav-menu-button {
@@ -93,7 +89,7 @@ body {
   }
   
   .mobile-menu a:hover {
-    color: #283618;
+    color: #dda15e;
   }
   
   /* Hero Section */
@@ -117,27 +113,31 @@ body {
     pointer-events: auto;
   }
   
-  .hero-title {
-    font-size: 3rem;
+  hero-title {
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .hero-subtitle {
-    font-size: 1.5rem;
-    color: #283618;
+    font-size: 1.875rem;
+    color: #a78bfa;
     margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
+  
   .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     max-width: 36rem;
     margin: 0 auto 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .primary-button {
     display: inline-block;
-    background-color: #283618;
+    background-color: #dda15e;
     color: white;
     padding: 0.75rem 2rem;
     border-radius: 9999px;
@@ -149,7 +149,7 @@ body {
   }
   
   .primary-button:hover {
-    background-color: #283618;
+    background-color: #dda15e;
   }
   
   /* Content Sections */
@@ -163,12 +163,13 @@ body {
   }
   
   .content-section {
-    background-color: rgba(17, 24, 39, 0.7);
+    background-color: rgba(17, 24, 39, 0.8); /* 80% opacity for better readability */
     backdrop-filter: blur(8px);
     border-radius: 0.5rem;
     margin: 1.25rem 0;
     padding: 2.5rem 1.25rem;
     pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
   }
   
   .section-title {
@@ -229,7 +230,7 @@ body {
   }
   
   .skill-tag:hover {
-    background-color: #283618;
+    background-color: #dda15e;
     color: white;
   }
   
@@ -241,11 +242,12 @@ body {
   }
   
   .project-card {
-    background-color: #111827;
+    background-color: rgba(17, 24, 39, 0.7); /* 70% opacity */
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
   
   .project-card:hover {
@@ -289,7 +291,7 @@ body {
   .project-tag {
     font-size: 0.75rem;
     background-color: #1f2937;
-    color: #283618;
+    color: #dda15e;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
   }
@@ -300,7 +302,7 @@ body {
   }
   
   .project-link {
-    color: #283618;
+    color: #dda15e;
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -335,7 +337,7 @@ body {
   }
   
   .social-icon:hover {
-    color: #283618;
+    color: #dda15e;
   }
   
   /* Footer */
@@ -418,7 +420,7 @@ body {
     width: 4rem;
     border-radius: 50%;
     border: 4px solid transparent;
-    border-top-color: #283618;
+    border-top-color: #dda15e;
     animation: spin 1s linear infinite;
   }
   
@@ -495,19 +497,4 @@ body {
   }
   
   /* Ensure text is very legible against transparent backgrounds */
-  .hero-title, 
-  .section-title {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .about-paragraph, 
-  .contact-text, 
-  .project-description {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Make the nav header more transparent too */
-  .nav-header {
-    background-color: rgba(17, 24, 39, 0.3);
-    backdrop-filter: blur(4px);
-  }
+ 
