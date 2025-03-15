@@ -98,7 +98,7 @@ export default function Portfolio() {
       {/* Content Container */}
       <div className="content-overlay">
         {/* Hero Section */}
-        <section className="hero-section">
+        <section className="title">
           <div className="hero-content">
             <h1 className="hero-title">Lawrence Velilla</h1>
             <h2 className="hero-subtitle">Creative Developer & 3D Artist</h2>
