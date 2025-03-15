@@ -1,0 +1,513 @@
+/* portfolio.css - Main styles for the portfolio page */
+
+/* Global styles */
+body {
+    margin: 0;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* 3D Scene Background */
+  .scene-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  
+  .scene-background canvas {
+    width: 100%;
+    height: 100%;
+    pointer-events: auto !important;
+  }
+  
+  /* Content Overlay Structure */
+  .content-overlay {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* Navigation */
+  .nav-header {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(8px);
+    pointer-events: auto;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #283618;
+  }
+  
+  .nav-menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .mobile-menu {
+    background-color: rgba(31, 41, 55, 0.95);
+    padding: 1rem;
+  }
+  
+  .mobile-menu a {
+    display: block;
+    padding: 0.75rem 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .mobile-menu a:hover {
+    color: #283618;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: rgba(152, 72, 72, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    pointer-events: auto;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #283618;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .primary-button {
+    display: inline-block;
+    background-color: #283618;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    pointer-events: auto;
+  }
+  
+  .primary-button:hover {
+    background-color: #283618;
+  }
+  
+  /* Content Sections */
+  .section {
+    padding: 5rem 1.5rem;
+  }
+  
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content-section {
+    background-color: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+    margin: 1.25rem 0;
+    padding: 2.5rem 1.25rem;
+    pointer-events: auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  /* About Section */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .about-image {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 9999px;
+    overflow: hidden;
+    background-color: #374151;
+  }
+  
+  .gradient-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    opacity: 0.75;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-paragraph {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .skill-tag {
+    background-color: #1f2937;
+    color: #c4b5fd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  
+  .skill-tag:hover {
+    background-color: #283618;
+    color: white;
+  }
+  
+  /* Projects Section */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: #111827;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .project-image {
+    height: 12rem;
+    background-color: #374151;
+    overflow: hidden;
+  }
+  
+  .project-gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    color: #d1d5db;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tag {
+    font-size: 0.75rem;
+    background-color: #1f2937;
+    color: #283618;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .project-link {
+    color: #283618;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .project-link:hover {
+    color: #c4b5fd;
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contact-text {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .social-icon {
+    font-size: 1.875rem;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #283618;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 2rem 1.5rem;
+    background-color: rgba(17, 24, 39, 0.8);
+    text-align: center;
+    pointer-events: auto;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-text {
+    color: #9ca3af;
+    margin-top: 0.5rem;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.875rem;
+    }
+    
+    .nav-links {
+      display: flex;
+    }
+    
+    .nav-menu-button {
+      display: none;
+    }
+    
+    .about-content {
+      flex-direction: row;
+    }
+    
+    .about-image {
+      width: 33.333333%;
+    }
+    
+    .about-text {
+      width: 66.666667%;
+    }
+    
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Special class for interactive elements */
+  .clickable {
+    pointer-events: auto;
+  }
+  /* Add these to the portfolio.css file */
+
+/* Loading screen styles */
+.loading-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111827;
+  }
+  
+  .loading-spinner {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #283618;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Base container */
+  .portfolio-container {
+    min-height: 100vh;
+    background-color: transparent;
+    color: white;
+  }
+
+  /* Updated styles for transparency - add these to your portfolio.css */
+
+/* More transparent hero content */
+.hero-content {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.15); /* Much more transparent */
+    backdrop-filter: blur(4px); /* Lighter blur */
+    border-radius: 0.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  }
+  
+  /* Make the content sections more transparent too */
+  .content-section {
+    background-color: rgba(17, 24, 39, 0.3); /* More transparent background */
+    backdrop-filter: blur(4px); /* Lighter blur */
+    border-radius: 0.5rem;
+    margin: 1.25rem 0;
+    padding: 2.5rem 1.25rem;
+    pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+    transition: background-color 0.3s;
+  }
+  
+  /* Add hover effect for better user experience */
+  .content-section:hover {
+    background-color: rgba(17, 24, 39, 0.4); /* Slightly more opaque on hover */
+  }
+  
+  /* Make the project cards more transparent too */
+  .project-card {
+    background-color: rgba(17, 24, 39, 0.4); /* More transparent */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-0.5rem);
+    background-color: rgba(17, 24, 39, 0.5); /* Slightly more opaque on hover */
+  }
+  
+  /* More transparent footer */
+  .footer {
+    padding: 2rem 1.5rem;
+    background-color: rgba(17, 24, 39, 0.3); /* More transparent */
+    text-align: center;
+    pointer-events: auto;
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Ensure text is very legible against transparent backgrounds */
+  .hero-title, 
+  .section-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-paragraph, 
+  .contact-text, 
+  .project-description {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Make the nav header more transparent too */
+  .nav-header {
+    background-color: rgba(17, 24, 39, 0.3);
+    backdrop-filter: blur(4px);
+  }
