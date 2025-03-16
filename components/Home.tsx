@@ -7,25 +7,12 @@ import '../app/portfolio-styles.css';
 
 export default function Home() {
   // Track if page is scrolled to control visibility of elements
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  
 
   return (
     <div className="portfolio-initial-page">
       <div 
-        className={`scene-background ${'invisible'}`}
+        className={`scene-background`}
         style={{ 
           position: 'absolute', 
           top: 0, 
