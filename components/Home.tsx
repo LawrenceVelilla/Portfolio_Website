@@ -1,9 +1,10 @@
 'use client';
 
 import App from '@/components/band_physics/App';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import '../app/portfolio-styles.css';
 
+// -- ADD scrolling effect for nav bar later --
 
 export default function Home() {
   // Track if page is scrolled to control visibility of elements
