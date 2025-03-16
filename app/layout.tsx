@@ -1,12 +1,13 @@
 import './globals.css'
+import './portfolio-styles.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'My portfolio website',
+  title: 'Lawrence Velilla | Portfolio',
+  description: 'Portfolio website of Lawrence Velilla, Full-Stack Developer',
 }
 
 export default function RootLayout({
@@ -18,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        </body>
+      </body>
     </html>
   )
 }

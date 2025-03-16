@@ -1,7 +1,7 @@
-import App from '@/components/band_physics/App'
+import HomeComponent from '@/components/Home'
 
 export default function Home() {
   return (
-    <App />
-  );
+    <HomeComponent />
+  )
 }

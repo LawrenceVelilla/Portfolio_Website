@@ -14,38 +14,21 @@ const GLTF_PATH = '/assets/IDCard.glb';
 useGLTF.preload(GLTF_PATH);
 
 export default function App() {
-  const [visible, setVisible] = useState(true);
+  // We don't need the visibility state here anymore as it's managed by the parent
   
-  // Hide the 3D scene when scrolling down
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className={`scene-background ${visible ? 'visible' : 'hidden'}`}>
-      <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
-        <ambientLight intensity={Math.PI} />
-        <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
-          <Band />
-        </Physics>
-        <Environment background blur={0.75}>
-          <color attach="background" args={['FEFAE0']} />
-          <Lightformer intensity={0} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-          <Lightformer intensity={0} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-          <Lightformer intensity={0} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-          <Lightformer intensity={0} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
-        </Environment>
-      </Canvas>
-    </div>
+    <Canvas camera={{ position: [0, 0, 13], fov: 25 }} gl={{ alpha: true, antialias: true, premultipliedAlpha: false }} linear>
+      <ambientLight intensity={Math.PI} />
+      <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
+        <Band />
+      </Physics>
+      <Environment background={false}>
+        <Lightformer intensity={5} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+        <Lightformer intensity={8} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+        <Lightformer intensity={10} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+        <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+      </Environment>
+    </Canvas>
   );
 }
 
@@ -102,7 +85,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
  
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[3, 3, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
