@@ -1,8 +1,8 @@
-import Portfolio from '@/components/Portfolio';
+import App from '@/components/band_physics/App'
 
 
 export default function Home() {
   return (
-    <Portfolio/>
+    <App />
   );
 }
