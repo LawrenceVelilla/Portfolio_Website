@@ -13,7 +13,7 @@ import '../app/globals.css';
 
 // 5. Change Css to Tailwind
 // 6. Add the project section and the about section
-// 7. Make nav bar work
+// 7. Make nav bar work (Change to buttons (add hover effect))
 // 8. Add a contact section
 
 // Important!!!
