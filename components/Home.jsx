@@ -47,12 +47,15 @@ export default function Home() {
         <div className="velilla">VELILLA</div>
       </section>
       <section className="container nav-bar">
+        //                         |
+        // Change these to buttons |                        
+        //                         v
         <div className="nav-bar">
-          <a href="#" className="button rectangle-1"></a> {/* Change this into a bordered background instead of an actual rectangl shape */}
-          <a href="#" className="button about">About</a>
-          <a href="#" className="button projects">Projects</a>
-          <a href="#" className="button experience">Experience</a>
-          <a href="#" className="button contacts">Contacts</a>
+          <button className="button rectangle-1"></button> {/* Change this into a bordered background instead of an actual rectangl shape */}
+          <a href="#"> <div className="button about">About</div></a>
+          <a href="#"> <div className="button projects">Projects</div></a>
+          <a href="#"> <div className="button experience">Experience</div></a>
+          <a href="#"> <div className="button contacts">Contacts</div></a>
         </div>
       </section>
       <section className="container about">
