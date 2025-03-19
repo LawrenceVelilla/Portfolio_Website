@@ -41,15 +41,19 @@ export default function Home() {
         <div className="frame-1">
           <div className="lawrence">LAWRENCE</div>
         </div>
-        <div className="full-stack-developer">Full-Stack Developer</div>
+        <div className="full-stack-developer">Full-Stack Development</div>
         <div className="data-science">Data Science</div>
         <div className="machine-learning">Machine Learning</div>
         <div className="velilla">VELILLA</div>
       </section>
       <section className="container nav-bar">
-        //                         |
+
+
+       {/*//                         |
         // Change these to buttons |                        
-        //                         v
+        //                         v*/}
+
+        
         <div className="nav-bar">
           <button className="button rectangle-1"></button> {/* Change this into a bordered background instead of an actual rectangl shape */}
           <a href="#"> <div className="button about">About</div></a>
