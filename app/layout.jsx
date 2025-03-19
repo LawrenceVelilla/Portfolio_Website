@@ -16,6 +16,7 @@ export const metadata = {
   description: 'Portfolio website of Lawrence Velilla, Full-Stack Developer, Data Science, and Machine Learning specialist',
 }
 
+{/*//                         |quick test*/}
 export default function RootLayout({children,}) {
   return (
     <html lang="en">
